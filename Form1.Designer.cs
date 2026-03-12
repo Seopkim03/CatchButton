@@ -42,7 +42,9 @@
             RunningButton.TabIndex = 0;
             RunningButton.Text = "나를 잡아봐";
             RunningButton.UseVisualStyleBackColor = false;
+            RunningButton.MouseDown += RunningButton_MouseDown;
             RunningButton.MouseEnter += RunningButton_MouseEnter;
+            RunningButton.MouseLeave += RunningButton_MouseLeave;
             // 
             // Form1
             // 

@@ -29,7 +29,18 @@ namespace CatchButton
             this.Text = $"버튼 위치: ({nextX}, {nextY})";
 
             // 수정된 코드: RunningButton 자체의 Cursor 속성을 설정
-            RunningButton.Cursor = Cursors.Hand;
+            RunningButton.Cursor = Cursors.Hand; // 버튼 위에 마우스가 올라갔을 때 손 모양으로 커서 변경
+        }
+
+        private void RunningButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            System.Media.SystemSounds.Beep.Play(); // 버튼을 눌렀을 때 소리 출력
+            MessageBox.Show("축하합니다"); // 버튼을 눌렀을 때 메세지 박스 표시
+        }
+
+        private void RunningButton_MouseLeave(object sender, EventArgs e)
+        {
+            Console.Beep(); // 버튼에서 마우스가 떠날 때 소리 출력
         }
     }
 }
