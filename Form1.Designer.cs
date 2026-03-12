@@ -45,6 +45,7 @@
             RunningButton.MouseDown += RunningButton_MouseDown;
             RunningButton.MouseEnter += RunningButton_MouseEnter;
             RunningButton.MouseLeave += RunningButton_MouseLeave;
+            RunningButton.MouseUp += RunningButton_MouseUp;
             // 
             // Form1
             // 
