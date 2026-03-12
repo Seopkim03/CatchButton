@@ -27,6 +27,9 @@ namespace CatchButton
             RunningButton.Location = new Point(nextX, nextY);
             // 5. 시각적 피드백 (폼 제목 표시줄에 좌표 출력)
             this.Text = $"버튼 위치: ({nextX}, {nextY})";
+
+            // 수정된 코드: RunningButton 자체의 Cursor 속성을 설정
+            RunningButton.Cursor = Cursors.Hand;
         }
     }
 }
