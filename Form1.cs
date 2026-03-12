@@ -13,10 +13,29 @@ namespace CatchButton
         }
 
         int score = 1000; // 초기점수 1000점으로 설정
+        int leaveCount = 0; // 버튼에서 마우스가 떠난 횟수 카운트
+
+        private void CheckGameOver()
+        {
+            if (leaveCount == 20)
+            {
+                MessageBox.Show("게임 오버! \n점수 : " + score); // 버튼에서 마우스가 20번 떠나면 게임 오버 메시지 표시
+                if (MessageBox.Show("Restart", "다시 시작하시겠습니까?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    //재시작
+                    Application.Exit();
+                    System.Diagnostics.Process.Start(Application.ExecutablePath);
+                }
+                else
+                {
+                    //종료
+                    Application.Exit();
+                }
+            }
+        }
 
         private void RunningButton_MouseEnter(object sender, EventArgs e)
         {
-
             // 1. 난수 생성기 준비
             Random rd = new Random();
             // 2. 가용 영역 계산 (버튼이 폼 테두리에 걸리지 않게 보호)
@@ -39,23 +58,24 @@ namespace CatchButton
         {
             System.Media.SystemSounds.Beep.Play(); // 버튼을 눌렀을 때 소리 출력
             score += 100; //버튼을 눌렀을 때 점수를 추가
-            //MessageBox.Show("축하합니다"); // 버튼을 눌렀을 때 메세지 박스 표시
+                          //MessageBox.Show("축하합니다"); // 버튼을 눌렀을 때 메세지 박스 표시
         }
 
         private void RunningButton_MouseLeave(object sender, EventArgs e)
         {
             Console.Beep(); // 버튼에서 마우스가 떠날 때 소리 출력
             score -= 10; // 버튼을 놓쳤을 때 점수 10점 감점
+            leaveCount += 1;
+            CheckGameOver(); // 게임 오버 조건 확인
         }
 
         private void RunningButton_MouseUp(object sender, MouseEventArgs e)
         {
-            
             Random rd = new Random();
-            
+
             int maxX = this.ClientSize.Width - RunningButton.Width;
             int maxY = this.ClientSize.Height - RunningButton.Height;
-            
+
             int nextX = rd.Next(0, maxX);
             int nextY = rd.Next(0, maxY);
 
@@ -63,7 +83,7 @@ namespace CatchButton
             this.Text = $"버튼 위치: ({nextX}, {nextY}) | 점수 : {score}";
             //버튼을 누르면 버튼이 다시 도망가도록 설정
 
-            RunningButton.Size = new Size(RunningButton.Width -10, RunningButton.Height - 10); // 버튼을 누를 때마다 버튼 크기 감소
+            RunningButton.Size = new Size(RunningButton.Width - 10, RunningButton.Height - 10); // 버튼을 누를 때마다 버튼 크기 감소
             Graphics g = RunningButton.CreateGraphics();
 
             SizeF textSize = g.MeasureString(RunningButton.Text, RunningButton.Font);
