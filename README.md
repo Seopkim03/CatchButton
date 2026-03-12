@@ -33,3 +33,11 @@
 //3단계 추가 : 작아지는 버튼의 크기에 맞게 글자의 크기도 감소
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3eedb75c-78a2-4145-9489-485996ea5b8f" />
 버튼 크기에 맞게 폰트를 변경하도록 변경
+
+-4단계 : 버튼을 20번 놓치면 게임 오버, 재시작 버튼 출력
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d526fca9-dc5f-4210-877a-45ec2263958f" />
+버튼을 20번 놓쳤을 떄 화면
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/593bcbf8-a3b8-47a3-baf3-1b702ca19686" />
+재시작 Yes / No 화면
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e9291a9f-489e-43f1-93b7-02e94919cf8d" />
+Yes를 누르면 재시작
