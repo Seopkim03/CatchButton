@@ -64,6 +64,15 @@ namespace CatchButton
             //버튼을 누르면 버튼이 다시 도망가도록 설정
 
             RunningButton.Size = new Size(RunningButton.Width -10, RunningButton.Height - 10); // 버튼을 누를 때마다 버튼 크기 감소
+            Graphics g = RunningButton.CreateGraphics();
+
+            SizeF textSize = g.MeasureString(RunningButton.Text, RunningButton.Font);
+
+            float scale = Math.Min(RunningButton.Width / textSize.Width, RunningButton.Height / textSize.Height);
+
+            float fontSize = RunningButton.Font.Size * scale;
+
+            RunningButton.Font = new Font(RunningButton.Font.FontFamily, fontSize, RunningButton.Font.Style);
         }
     }
 }
