@@ -29,3 +29,7 @@
 버튼을 놓치면 10점 감점
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9a7938fc-7da8-42f0-ad7a-324d77feef13" />
 버튼을 잡으면 100점 추가, 랜덤 좌표 이동, 버튼 크기 감소
+
+//3단계 추가 : 작아지는 버튼의 크기에 맞게 글자의 크기도 감소
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3eedb75c-78a2-4145-9489-485996ea5b8f" />
+버튼 크기에 맞게 폰트를 변경하도록 변경
