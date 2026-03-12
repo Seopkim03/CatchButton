@@ -20,7 +20,7 @@ namespace CatchButton
             if (leaveCount == 20)
             {
                 MessageBox.Show("게임 오버! \n점수 : " + score); // 버튼에서 마우스가 20번 떠나면 게임 오버 메시지 표시
-                if (MessageBox.Show("다시 시작하시겠습니까?", "Restart", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("다시 시작하시겠습니까?", "Restart", MessageBoxButtons.YesNo) == DialogResult.Yes)//재시작 버튼 출력
                 {
                     //재시작
                     Application.Exit();
