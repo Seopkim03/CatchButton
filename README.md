@@ -15,3 +15,9 @@
 초기화면
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/02f84f18-2d70-4161-8ea3-c7c7f6cf7ee9" />
 랜덤 이동
+
+-2단계 (버튼을 잡거나 놓쳤을 때 효과음 추가, 버튼을 잡았을 때 메세지 박스 출력, 버튼 위에 마우스 커서가 올라가면 커서 아이콘 변경)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5bd762c0-99df-4d7c-928b-c971a5d59862" />
+버튼을 놓치면 효과음 출력, 랜덤 좌표 이동
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4e21361a-e0b4-48fd-8027-b7b917d09429" />
+버튼을 잡으면 "축하합니다" 메세지 박스 출력
